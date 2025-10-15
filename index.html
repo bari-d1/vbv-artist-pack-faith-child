@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verse by Verse • Artist Invitation Pack</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --vbv-red: #fc0301;
+      --ink: #111111;
+      --muted: #5b5b5b;
+      --bg: #ffffff;
+      --card: #ffffff;
+      --ring: rgba(252, 3, 1, 0.15);
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Space Grotesk", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 48px auto;
+      padding: 0 20px 64px;
+    }
+
+    /* Header */
+    .header {
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--vbv-red);
+    }
+
+    .titleblock h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+    .titleblock p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* Card */
+    .card {
+      background: var(--card);
+      border: 1px solid #ececec;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+      margin: 14px 0 20px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 18px;
+    }
+
+    p { margin: 8px 0; }
+
+    .kicker {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #fff4f4;
+      color: var(--vbv-red);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      border: 1px solid rgba(252,3,1,0.15);
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 10px 0;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    @media (min-width: 720px) {
+      .grid.two { grid-template-columns: 1fr 1fr; }
+      .grid.three { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .label { color: var(--muted); font-size: 13px; }
+    .value { font-weight: 600; }
+
+    .fields {
+      display: grid;
+      gap: 12px;
+    }
+
+    .field {
+      display: grid;
+      gap: 4px;
+      border: 1px dashed #e6e6e6;
+      border-radius: 10px;
+      padding: 12px;
+      background: #fff;
+    }
+
+    .accent {
+      color: var(--vbv-red);
+    }
+
+    .callout {
+      border-left: 4px solid var(--vbv-red);
+      padding: 10px 14px;
+      background: #fff7f7;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+
+    .footer {
+      margin-top: 28px;
+      display: grid;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .btnrow { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .btn {
+      appearance: none;
+      border: 1px solid var(--vbv-red);
+      background: var(--vbv-red);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 0 0 0 rgba(252,3,1,0.3);
+    }
+    .btn.ghost { background: #fff; color: var(--vbv-red); }
+
+    /* Print */
+    @media print {
+      body { background: white; }
+      .wrap { margin: 0; padding: 0; }
+      .card { box-shadow: none; }
+      .btnrow { display: none; }
+    }
+      /* Scheduler */
+    .scheduler { margin-top: 6px; }
+    .scheduler iframe { width: 100%; height: 760px; border: 1px solid #ececec; border-radius: 12px; }
+    .scheduler .alt {
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .scheduler .alt a { color: var(--vbv-red); font-weight: 600; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo" aria-label="Verse by Verse logo" style="text-align: center;"><img src="white_icon.png" alt="vbv_icon" style="width: 100px; height:100px"></div>
+      <div class="titleblock">
+        <h1>Artist Invitation Pack</h1>
+        <p>For: <strong>Faith Child</strong> • Song: <strong>Holy Place</strong></p>
+      </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="card">
+      <span class="kicker">Introduction</span>
+      <p>Dear <strong>Faith Child</strong>,</p>
+      <p>We are excited to invite you to feature on <strong>Verse by Verse</strong>. This space exists to share the stories, scriptures, and revelations that shape a song. We believe your song <strong>Holy Place</strong> carries a message that will bless many, and a conversation around it will help people connect even more deeply.</p>
+    </section>
+
+    <!-- What We Do -->
+    <section class="card">
+      <span class="kicker">What we do</span>
+      <div class="grid two">
+        <div>
+          <h3>Conversation format</h3>
+          <p>A relaxed sit down where you share the heart and journey behind the song.</p>
+        </div>
+        <div>
+          <h3>Verse by verse breakdown</h3>
+          <p>Walk through the lyrics line by line, sharing story, scripture, and revelation.</p>
+        </div>
+      </div>
+      <div class="callout">
+        Our aim is simple, help listeners encounter God through both the music and the story behind it.
+      </div>
+    </section>
+
+    <!-- What You Can Expect -->
+    <section class="card">
+      <span class="kicker">What you can expect</span>
+      <ul>
+        <li>Authentic conversation</li>
+        <li>Professional recording and editing</li>
+        <li>Distribution across Verse by Verse channels</li>
+        <li>Promotion that highlights your artistry and the message of the song</li>
+      </ul>
+    </section>
+
+    <!-- Event Details -->
+    <section class="card">
+      <span class="kicker">Event details</span>
+      <div class="fields">
+        <div class="field"><span class="label">Recording date</span><span class="value">19th October 2025</span></div>
+        <div class="field"><span class="label">Time</span><span class="value">1pm</span></div>
+        <div class="field"><span class="label">Location</span><span class="value"><a href="https://maps.app.goo.gl/quEkwYGySf7kncyS6?g_st=ipc">X1 The Landmark, 30 Oldfield Rd, Salford M5 4ZL</a></span></div>
+        <div class="field"><span class="label">Duration</span><span class="value">Approx. 45 to 60 minutes</span></div>
+        <div class="field"><span class="label">Format</span><span class="value">In person interview</span></div>
+        <div class="field"><span class="label">Release timeline</span><span class="value">within 2 to 4 weeks after recording</span></div>
+        <!-- <div class="field"><span class="label">Points to highlight</span><span class="value">[Any special focus, scripture, testimony]</span></div> -->
+      </div>
+    </section>
+    <!-- Booking -->
+    <!-- <section class="card">
+      <span class="kicker">Book a slot</span>
+      <p>We aim to work around your availability. You can pick a time that suits you using the calendar below.</p>
+      <div class="scheduler">
+        <!-- Replace the URL with your actual scheduler link, for example Calendly or Cal.com 
+        <iframe title="Verse by Verse scheduling" src="https://calendly.com/versebyversestudio/30min"></iframe>
+        <div class="alt">If the embed does not load, use this link: <a href="https://calendly.com/versebyversestudio/30min" target="_blank" rel="noopener">Open scheduling page</a>.</div>
+      </div>
+    </section> -->
+
+    <!-- Next Steps
+    <section class="card">
+      <span class="kicker">Next steps</span>
+      <p>Please pick a slot on the calendar above or share your availability and location preference. We will confirm details and send a simple brief and call sheet.</p>
+      <div class="btnrow">
+        <a class="btn" href="#">Accept and share availability</a>
+        <a class="btn ghost" href="#">Ask a question</a>
+      </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div><strong>Dayo Adebari</strong>, Founder, Verse by Verse</div>
+      <div>Email: <a href="mailto:info@versebyverse.studio">info@versebyverse.studio</a> • Phone: <a href="tel:+447788846117">+447788846117</a></div>
+      <div>Instagram: <a href="https://instagram.com/versebyverse.studio" target="_blank" rel="noopener">@versebyverse.studio</a> • Youtube: <a href="https://www.youtube.com/@versebyverse.studio" target="_blank" rel="noopener">@versebyverse.studio</a></div>
+    </footer>
+  </div>
+</body>
+</html>
